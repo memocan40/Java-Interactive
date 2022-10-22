@@ -15,29 +15,35 @@ public class jframe {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setBorder(new EmptyBorder(new Insets(40, 40, 40, 40)));
-        JLabel label = new JLabel("So Lets ");
-        JButton button = new JButton();
-        button.setText("Button");
+        JLabel label = new JLabel(
+                "<html>You Enter A Room And see 2 Doors. <br> A Blue one and a Red One.<br> Which one do you Enter?</html>");
+        JButton buttonA = new JButton();
+        JButton buttonB = new JButton();
+        buttonA.setText("Blue");
+        buttonB.setText("Red");
         panel.add(label);
-        panel.add(button);
+        panel.add(buttonA);
+        panel.add(buttonB);
         frame.add(panel);
         frame.setSize(200, 200);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        button.addActionListener(new ActionListener() {
+        buttonA.addActionListener(new ActionListener() {
 
             @Override
-            public void actionPerformed(ActionEvent e) { 
-                buttonClick(label);
+            public void actionPerformed(ActionEvent e) {
+                interactiveA.interact(label, label.getText(), buttonA, buttonB);
+            }
+        });
+        buttonB.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(22);
 
             }
         });
         frame.setVisible(true);
-    }
-
-    public static void buttonClick(JLabel label) {
-        label.setText("Why you Clicked it?");
-        System.out.println(label.getText());
     }
 
 }
