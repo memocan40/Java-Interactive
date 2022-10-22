@@ -11,10 +11,10 @@ import java.awt.event.ActionListener;
 
 public class jframe {
     public static void showFrame() {
-        JFrame frame = new JFrame("JFrame Example");
+        JFrame frame = new JFrame("Memos Frame");
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.setBorder(new EmptyBorder(new Insets(40, 40, 40, 40)));
+        panel.setBorder(new EmptyBorder(new Insets(90, 90, 90, 90)));
         JLabel label = new JLabel(
                 "<html>You Enter A Room And see 2 Doors. <br> A Blue one and a Red One.<br> Which one do you Enter?</html>");
         JButton buttonA = new JButton();
@@ -25,7 +25,7 @@ public class jframe {
         panel.add(buttonA);
         panel.add(buttonB);
         frame.add(panel);
-        frame.setSize(200, 200);
+        frame.setSize(500, 500);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         buttonA.addActionListener(new ActionListener() {

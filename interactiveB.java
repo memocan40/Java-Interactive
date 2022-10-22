@@ -11,9 +11,9 @@ public class interactiveB {
             buttonB.setText("Go Back");
         }
         if (text.contains("Idiots")) {
-            label.setText("You are a Braaiiin :)");
-            buttonA.setText("Memo is so Cool");
-            buttonB.setText("Memo is the Best!");
+            label.setText("You are a Idiot :)");
+            buttonA.setText("You are a Idiot :)");
+            buttonB.setText("You are a Idiot :)");
         }
         if (text.contains("Enter")) {
             System.out.println(1);
