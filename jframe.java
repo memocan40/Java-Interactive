@@ -39,7 +39,7 @@ public class jframe {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(22);
+                interactiveB.interact(label, label.getText(), buttonA, buttonB);
 
             }
         });
